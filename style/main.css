@@ -1,0 +1,252 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 100%;
+}
+html{scroll-behavior: smooth;
+}
+body{
+    background-color: white;
+}
+.container{
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* start header */
+header{
+   z-index: 1;
+   background-color: rgb(181, 187, 187);
+   position: fixed;
+   width: 100%;
+   
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .container .links{
+    display: flex;
+    position: relative;
+}
+header button{
+    height: fit-content;
+    margin-top: 18px;
+    border: 0;
+    border-radius: 10px;
+}
+header button  i{
+    font-size: 22px;
+    text-align: center;
+    padding: 5px 10px;
+    
+}
+header button:hover{
+    background-color: rgb(140, 176, 176);
+    color: aliceblue;
+}
+
+header .container .links li .links-prod {
+    margin-right:20px;
+    display: block;
+    font-size: 25px;
+    transition: .3s;
+    color: #171717;
+    padding:20px 10px
+}
+header .product-kinds{
+    position: absolute;
+    background-color: rgb(235, 236, 237);
+    box-shadow: 1px 2px 5px rgb(216, 219, 219);
+    display: none;
+    transition: .5s;
+}
+header .product-kinds li .product-kinds-lin{
+    display: block;
+    padding: 20px 40px;
+    color: #171717;
+    font-size: 18px;
+    transition: .3s;
+    z-index: 999;
+}
+.product-kinds .product-kinds-lin:hover{
+    transform: translateX(5px);
+    color: rgb(126, 172, 157);
+}
+#product:hover .product-kinds{
+    display: block;
+}
+header .container .links li .links-prod:hover{
+    background-color: rgb(140, 176, 176);
+    color: aliceblue;
+}
+header i{
+    font-size: 45px;
+    color:black;
+}
+header i:hover{
+    color: whitesmoke;
+}
+/* end header */
+/* start landing */
+.landing{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: calc(100vh - 75px);
+    background:  url(../img/coffee-notebook-near-laptop.jpg),no-repeat;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+}
+.landing .text{
+    width: 45%;
+    margin-top: calc(50% - 500px);
+    color: rgb(21, 22, 23);
+}
+.text h1{
+    font-size: 55px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.text span{
+    color: rgb(47, 92, 164);
+}
+.text p{
+    font-size: 22px;
+    line-height: 1.5;
+    text-align: center;
+}
+.landing  a i{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 22px;
+    color: rgb(45, 126, 234);
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0%{
+        transform: translate(0, 0);
+    }
+    50%{
+        transform: translate(0, 10px);
+    }
+    100%{
+        transform: translate(0, 0);
+    }
+}
+/* end landing */
+
+/* start product */
+.product{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.hadding{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+    color:rgb(221, 217, 217);
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.product .container{
+    margin-top: 40px;
+}
+.all-product{
+    display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(333px, 1fr));
+  gap: 40px;
+}
+.all-product .min-product{
+    box-shadow: 1px 2px 5px rgb(181, 187, 187);
+    transition: .3s;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.all-product .min-product:hover{
+    box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+    transform: translateY(-10px);
+}
+.min-product .img-product{
+    padding-top: 10px;
+}
+.min-product .descripton{
+    padding-left: 10px;
+    
+}
+.min-product .descripton h4{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 22px;
+
+}
+.min-product .descripton p{
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    padding-top: 20px;
+    font-weight: 500;
+}
+.min-product .price p{
+    padding-left: 10px;
+    font-size: 22px;
+    text-align: center;
+    padding-top: 20px;
+}
+.min-product .more{
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+.min-product .more a{
+    width: fit-content;
+    background-color: rgb(15, 15, 229);
+    padding: 10px 20px;
+    color: white;
+    margin-right: 10px;
+    border-radius: 24px;
+    font-size: 18px;
+}
+.min-product a:hover{
+    background-color: rgb(116, 137, 130);
+}
+/* end product */
+footer{
+    text-align: center;
+    background-color: rgb(181, 187, 187);
+    padding-top: 60px;
+    padding-bottom: 60px
+}
+footer p{
+    font-size: 25px;
+    font-weight: lighter;
+    font-family: cursive;
+    margin-bottom: 30px;
+}
+footer p span{
+    font-family: 'FontAwesome';
+    color: darkcyan;
+}
+footer .socail a i{
+    font-size: 30px;
+    margin-right: 20px;
+    color: #474646;
+    transition: .3s;
+}
+footer .socail a i:hover{
+    color: #171717;
+    transform: scale(1.4);
+}
